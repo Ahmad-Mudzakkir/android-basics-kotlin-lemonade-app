@@ -23,5 +23,17 @@
         <!-- Status bar color. -->
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+        <item name="textInputStyle">@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox</item>
+        <item name="radioButtonStyle">@style/Widget.Lemonade.CompoundButton.RadioButton</item>
+        <item name="switchStyle">@style/Widget.Lemonade.CompoundButton.Switch</item>
     </style>
+
+    <style name="Theme.Lemonade.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.Lemonade.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="Theme.Lemonade.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
