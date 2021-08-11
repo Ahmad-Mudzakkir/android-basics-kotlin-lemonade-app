@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.lemonade.AffirmationsApp
 import com.example.lemonade.R
 import com.example.lemonade.model.Affirmation
 
@@ -28,13 +29,13 @@ class ItemAdapter(
     }
 
     /**
-     * Create new views (invoked by the layout manager)
+     * Create new views (invoked by the layout manager) with R.layout.list_item as its template
      */
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         // create a new view
-        val adapterLayout = LayoutInflater.from(parent.context)
+        val adapterLayout = LayoutInflater
+            .from(parent.context)
             .inflate(R.layout.list_item, parent, false)
-
         // return a new ItemViewHolder instance where the root view is adapterLayout
         return ItemViewHolder(adapterLayout)
     }

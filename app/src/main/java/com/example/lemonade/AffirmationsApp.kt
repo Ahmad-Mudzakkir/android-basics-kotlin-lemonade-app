@@ -11,6 +11,7 @@ import com.example.lemonade.databinding.ActivityAffirmationsAppBinding
 class AffirmationsApp : AppCompatActivity() {
 
     private lateinit var binding: ActivityAffirmationsAppBinding
+    private lateinit var recyclerView: RecyclerView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -19,7 +20,6 @@ class AffirmationsApp : AppCompatActivity() {
 
 
 //        val textView: TextView = binding.textView
-
 //        textView.text = Datasource().loadAffirmations().size.toString()
 
         // Initialize data.
@@ -30,16 +30,16 @@ class AffirmationsApp : AppCompatActivity() {
         // Create a variable called recyclerView and use findViewById()
         // to find a reference to the RecyclerView within the layout.
         // val recyclerView = findViewById<RecyclerView>(R.id.recycler_view)
-        val recyclerView = binding.recyclerView
+        recyclerView = binding.recyclerView
+
+        // Use this setting to improve performance if you know that changes
+        // in content do not change the layout size of the RecyclerView
+        recyclerView.setHasFixedSize(true)
 
         //To tell the recyclerView to use the ItemAdapter class you created, create a new ItemAdapter instance.
         // ItemAdapter expects two parameters: the context (this) of this activity, and the affirmations in myDataset.
         recyclerView.adapter = ItemAdapter(this, myDataset)
 
-
-        // Use this setting to improve performance if you know that changes
-        // in content do not change the layout size of the RecyclerView
-        recyclerView.setHasFixedSize(true)
 
 
 
